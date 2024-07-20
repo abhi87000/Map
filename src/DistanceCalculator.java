@@ -1,11 +1,12 @@
 import MapVehicleTypes.CalculateDistance;
+import MapVehicleTypes.CalculateDistanceInterface;
 import Strategy.Impl.BikeStrategy;
 import Strategy.Impl.CarStrategy;
 import Strategy.Impl.WalkStrategy;
 import Enum.Vehicle;
 
 public class DistanceCalculator {
-    CalculateDistance calculateDistance;
+    CalculateDistanceInterface calculateDistance;
 
     public DistanceCalculator(Vehicle vehicle) {
         if(vehicle== Vehicle.CAR)
