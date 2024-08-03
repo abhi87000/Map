@@ -8,14 +8,8 @@ import Enum.Vehicle;
 public class DistanceCalculator {
     CalculateDistanceInterface calculateDistance;
 
-    public DistanceCalculator(Vehicle vehicle) {
-        if(vehicle== Vehicle.CAR)
-            this.calculateDistance=new CalculateDistance(new CarStrategy());
-        else if(vehicle== Vehicle.BIKE)
-            this.calculateDistance=new CalculateDistance(new BikeStrategy());
-        else if(vehicle== Vehicle.WALK)
-            this.calculateDistance=new CalculateDistance(new WalkStrategy());
-        else this.calculateDistance=new CalculateDistance(new WalkStrategy());
+    public DistanceCalculator(CalculateDistanceInterface calculateDistance) {
+        this.calculateDistance=calculateDistance;
     }
 
     public int cal() {

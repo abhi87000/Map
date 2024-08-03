@@ -4,7 +4,7 @@ import Strategy.Impl.BikeStrategy;
 
 public class Bike extends CalculateDistance {
 
-    Bike(){
+    public Bike(){
         super(new BikeStrategy());
     }
 
